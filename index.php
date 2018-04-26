@@ -12,8 +12,8 @@ require './classes/Log.class.php'
     <body>
         <?php
             $texto = "To escrevendo";
-            $log = new Log();
-            $log->escreverLog($texto);
+            $log = Log::getIntance();
+            //$log::escreverLog($texto);
             
             
         ?>
