@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Description of Log
+ *
+ * @author Edmilson
+ */
+class Log {
+         
+    public function escreverLog($texto){
+
+        $hoje = date("Y_m_d"); 
+        $arquivo = fopen("log_tarefa.$hoje.txt", "ab");
+        fwrite($arquivo, "$texto .\r\n");
+        $hora = date("H:i:s T");
+        fwrite($arquivo, "[$hora] Tarefa executada.\r\n");
+        fclose($arquivo);
+
+    }
+    
+ }
