@@ -1,5 +1,6 @@
 <?php
-require './classes/Log.class.php'
+require './classes/Log.class.php';
+require './classes/EscreveLog.class.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,11 +12,9 @@ require './classes/Log.class.php'
     </head>
     <body>
         <?php
-            $texto = "To escrevendo";
-            $log = Log::getIntance();
-            //$log::escreverLog($texto);
-            
-            
+        $texto = "To escrevendo";
+        $log = EscreveLog::getIntance();        
+        $log::escreverLog($texto);
         ?>
     </body>
 </html>

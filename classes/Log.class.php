@@ -5,7 +5,7 @@
  *
  * @author Edmilson
  */
-class Log {
+abstract class Log {
 
     /**
      * Construtor do tipo protegido previne que uma nova instância da
@@ -47,11 +47,11 @@ class Log {
         if(null=== $instance){
             $instance = new static();
         }
+        return $instance;
             
     }
     
-    public static function escreverLog($texto) {
-
+    public static function escreverLog($texto) {                     
         $hoje = date("Y_m_d");
         if (!is_dir("Log")) {
             mkdir("Log");
